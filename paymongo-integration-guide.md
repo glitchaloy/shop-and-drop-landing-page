@@ -222,7 +222,7 @@ const PaymentForm = ({ amount, onSuccess, onError }) => {
   return (
     <form onSubmit={handleSubmit}>
       <CardElement
-        options={{
+        options={% raw %}{{
           style: {
             base: {
               fontSize: '16px',
@@ -232,7 +232,7 @@ const PaymentForm = ({ amount, onSuccess, onError }) => {
               },
             },
           },
-        }}
+        }}{% endraw %}
       />
       <button disabled={!stripe || loading}>
         {loading ? 'Processing...' : `Pay ₱${amount}`}
